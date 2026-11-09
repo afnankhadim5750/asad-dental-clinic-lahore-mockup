@@ -1,0 +1,277 @@
+/* Asad Dental — clean clinical/modern. White base, cool teal, deep navy. */
+:root{
+  --white:#FFFFFF;
+  --teal:#0F766E;
+  --teal-dark:#0B5E57;
+  --navy:#0B2A4A;
+  --navy-deep:#081F36;
+  --mist:#EAF1F4;
+  --mist-line:#D3DEE4;
+  --ink:#14232E;
+  --ink-soft:#3D5566;
+  --display:"Spectral",Georgia,serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --radius:4px;
+  --wrap:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.65;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--teal)}
+a:hover{color:var(--teal-dark)}
+h1,h2,h3{font-family:var(--display);line-height:1.12;margin:0 0 .6em;color:var(--ink)}
+h2{font-size:clamp(1.9rem,3.4vw,2.7rem);font-weight:700}
+h3{font-size:1.35rem;font-weight:600}
+p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.section{padding:84px 0}
+.section-intro{max-width:640px;color:var(--ink-soft);font-size:1.125rem}
+.eyebrow{font-family:var(--body);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin:0 0 14px}
+.eyebrow.light{color:#9FD8D2}
+.skip{position:absolute;left:-9999px;top:0;background:var(--navy);color:#fff;padding:10px 16px;z-index:200}
+.skip:focus{left:8px;top:8px;color:#fff}
+
+/* Buttons — sharp-cornered rectangles, never pills */
+.btn{display:inline-block;font-family:var(--body);font-weight:700;font-size:1rem;text-decoration:none;padding:13px 26px;border-radius:var(--radius);border:2px solid transparent;cursor:pointer;text-align:center;line-height:1.3}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal-dark);color:#fff}
+.btn-light{background:#fff;color:var(--navy)}
+.btn-light:hover{background:var(--mist);color:var(--navy)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.65)}
+.btn-ghost:hover{border-color:#fff;color:#fff}
+.btn-big{padding:16px 30px;font-size:1.075rem}
+.btn:focus-visible,a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--mist-line)}
+.header-inner{display:flex;align-items:center;gap:28px;min-height:72px}
+.wordmark{text-decoration:none;color:var(--ink);line-height:1.05;flex:none}
+.wordmark-name{display:block;font-family:var(--display);font-weight:700;font-size:1.5rem;color:var(--navy)}
+.wordmark-sub{display:block;font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+.site-nav{display:flex;gap:26px;margin-left:auto}
+.site-nav a{text-decoration:none;color:var(--ink);font-weight:600;font-size:.98rem;padding:6px 0}
+.site-nav a:hover{color:var(--teal)}
+.site-nav a.active{color:var(--teal);box-shadow:inset 0 -2px 0 var(--teal)}
+.nav-cta{color:var(--teal)!important}
+.header-call{flex:none;font-weight:700;color:var(--navy);text-decoration:none;font-size:1.02rem}
+.header-call:hover{color:var(--teal)}
+.menu-toggle{display:none;background:none;border:0;cursor:pointer;padding:10px;margin-left:auto}
+.menu-toggle span{display:block;width:26px;height:3px;background:var(--navy);margin:5px 0}
+.mobile-menu{display:none;flex-direction:column;background:var(--white);border-top:1px solid var(--mist-line);padding:8px 24px 18px}
+.mobile-menu[hidden]{display:none}
+.mobile-menu a{display:block;padding:13px 0;border-bottom:1px solid var(--mist);text-decoration:none;color:var(--ink);font-weight:600;font-size:1.05rem}
+.mobile-menu a.mobile-call{color:var(--teal);border-bottom:0}
+
+/* Hero — type-led on deep teal-to-navy */
+.hero{background:linear-gradient(118deg,var(--navy) 0%,var(--navy-deep) 46%,var(--teal) 130%);color:#fff;padding:72px 0 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:stretch}
+.hero-copy{padding:26px 0 64px}
+.hero .eyebrow{color:#9FD8D2}
+.hero h1{color:#fff;font-size:clamp(2.6rem,5.2vw,4.1rem);font-weight:700;margin-bottom:.45em}
+.hero .lede{font-size:1.22rem;line-height:1.6;color:#DCE8EC;max-width:560px}
+.rating-line{color:#fff;font-size:1.02rem}
+.rating-line .stars{color:#F5C542;letter-spacing:.1em}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin:26px 0 16px}
+.hero-note{font-size:.95rem;color:#B9CFD6;margin:0}
+.hero-visual{position:relative;display:flex;flex-direction:column;justify-content:flex-end}
+.hero-photo{width:100%;max-width:420px;height:100%;min-height:420px;object-fit:cover;object-position:50% 50%;margin-left:auto;border-radius:var(--radius) var(--radius) 0 0}
+.appt-panel{position:absolute;left:0;bottom:0;max-width:340px;background:#fff;color:var(--ink);padding:22px 24px;border-radius:var(--radius);box-shadow:0 18px 40px rgba(4,20,32,.35)}
+.appt-panel .appt-title{font-family:var(--display);font-size:1.3rem;font-weight:700;margin:0 0 4px;color:var(--navy)}
+.appt-panel .appt-hours{color:var(--ink-soft);margin:0 0 14px}
+.appt-panel .btn{display:block;width:100%}
+.appt-panel .appt-small{font-size:.9rem;color:var(--ink-soft);margin:12px 0 0}
+
+/* Trust bar */
+.trust{background:var(--navy);color:#fff;padding:26px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.trust-grid div{border-left:1px solid rgba(255,255,255,.22);padding:4px 12px}
+.trust-grid div:first-child{border-left:0}
+.trust strong{display:block;font-family:var(--display);font-size:1.7rem;font-weight:700;color:#fff}
+.trust span{font-size:.92rem;color:#B9CFD6}
+
+/* Treatments board */
+.treatments{background:var(--white)}
+.tabs{display:flex;gap:0;margin:38px 0 0;border-bottom:2px solid var(--navy);flex-wrap:wrap}
+.tab{font-family:var(--body);font-size:1.05rem;font-weight:700;color:var(--ink-soft);background:var(--mist);border:0;border-bottom:2px solid transparent;padding:15px 26px;cursor:pointer;margin-bottom:-2px}
+.tab:hover{color:var(--navy)}
+.tab.active{background:var(--navy);color:#fff}
+.tab-panel{display:none;grid-template-columns:1fr 1fr;gap:48px;padding:44px 0 8px;align-items:start}
+.tab-panel.active{display:grid}
+.tab-panel h3{font-size:1.6rem}
+.check-list{list-style:none;margin:0 0 1.2em;padding:0}
+.check-list li{padding:10px 0 10px 34px;border-bottom:1px solid var(--mist-line);position:relative;font-weight:600}
+.check-list li::before{content:"";position:absolute;left:0;top:14px;width:20px;height:20px;background:var(--teal);clip-path:polygon(14% 44%,0 60%,40% 100%,100% 16%,84% 2%,38% 70%)}
+.tab-note{color:var(--ink-soft);font-style:italic}
+.tab-photos{display:grid;gap:18px}
+.tab-photos img{border-radius:var(--radius);width:100%;object-fit:cover}
+.tab-photos img:first-child{aspect-ratio:4/3}
+.tab-photos img:nth-child(2){aspect-ratio:16/9}
+#panel-surgery .tab-photos img:first-child{aspect-ratio:3/4;max-height:520px}
+#panel-implants .tab-photos img,#panel-general .tab-photos img{aspect-ratio:16/10}
+
+/* Surgery feature */
+.surgery{background:var(--mist)}
+.surgery-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.surgery-photos{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.surgery-photos img{border-radius:var(--radius);width:100%;object-fit:cover}
+.surgery-main{aspect-ratio:3/4}
+.surgery-second{aspect-ratio:3/4;margin-top:44px}
+
+/* What to expect */
+.steps{list-style:none;margin:44px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--navy)}
+.steps li{padding:28px 22px 8px 0;border-right:1px solid var(--mist-line);margin-right:22px}
+.steps li:last-child{border-right:0;margin-right:0}
+.step-no{display:block;font-family:var(--display);font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;margin-bottom:10px}
+.steps h3{margin-bottom:.35em}
+.steps p{color:var(--ink-soft)}
+.expect-photos{display:grid;grid-template-columns:1.4fr 1fr;gap:18px;margin-top:40px}
+.expect-photos img{border-radius:var(--radius);width:100%;object-fit:cover}
+.expect-photos img:first-child{aspect-ratio:16/10}
+.expect-photos img:last-child{aspect-ratio:3/4;max-height:420px}
+
+/* Emergency band */
+.emergency{background:var(--teal);color:#fff;padding:64px 0}
+.emergency-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+.emergency h2{color:#fff}
+.emergency p{color:#DFF0EE}
+.emergency-action .btn-big{width:100%}
+.emergency-action p{font-size:.95rem;margin:14px 0 0}
+
+/* Why patients choose */
+.why-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.quote-card{margin:30px 0 0;padding:26px 28px;background:var(--mist);border-left:5px solid var(--teal);border-radius:0 var(--radius) var(--radius) 0}
+.quote-card blockquote{margin:0;font-family:var(--display);font-size:1.35rem;line-height:1.4;color:var(--navy)}
+.quote-card figcaption{margin-top:12px;color:var(--ink-soft);font-size:.95rem}
+.why-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.why-card{background:var(--white);border:1px solid var(--mist-line);border-top:4px solid var(--teal);border-radius:var(--radius);padding:22px 24px}
+.why-card:nth-child(5){grid-column:1/-1}
+.why-card h3{font-size:1.18rem;margin-bottom:.3em}
+.why-card p{color:var(--ink-soft);margin:0}
+.why-photo{margin-top:44px}
+.why-photo img{border-radius:var(--radius);width:100%;aspect-ratio:21/9;object-fit:cover}
+
+/* Gallery */
+.gallery{background:var(--mist)}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+.gallery-item{border:0;padding:0;background:none;cursor:pointer;border-radius:var(--radius);overflow:hidden}
+.gallery-item img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .3s ease}
+.gallery-item:hover img,.gallery-item:focus-visible img{transform:scale(1.04)}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.about-photos{display:grid;gap:18px}
+.about-photos img{border-radius:var(--radius);width:100%;object-fit:cover}
+.about-photos img:first-child{aspect-ratio:16/10}
+.about-photos img:last-child{aspect-ratio:16/9}
+.about-note{font-size:.95rem;color:var(--ink-soft);border-top:1px solid var(--mist-line);padding-top:14px}
+
+/* Visit & hours */
+.visit{background:var(--white)}
+.visit-grid{display:grid;grid-template-columns:380px 1fr;gap:32px;margin-top:36px;align-items:stretch}
+.hours-card{background:var(--navy);color:#fff;padding:32px 30px;border-radius:var(--radius)}
+.hours-card h3{color:#fff;font-size:1.5rem}
+.hours-card table{width:100%;border-collapse:collapse;margin:0 0 16px}
+.hours-card th,.hours-card td{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.18);text-align:left;font-weight:400;vertical-align:top}
+.hours-card td{text-align:right;color:#DCE8EC}
+.hours-note{font-size:.92rem;color:#B9CFD6}
+.hours-card p{color:#DCE8EC}
+.hours-card a{color:#fff}
+.hours-card .btn{display:block;margin-top:18px}
+.map-wrap{border-radius:var(--radius);overflow:hidden;min-height:420px;border:1px solid var(--mist-line)}
+.map-wrap iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+/* FAQ */
+.faq{background:var(--mist)}
+.faq-narrow{max-width:820px}
+.faq details{background:var(--white);border:1px solid var(--mist-line);border-radius:var(--radius);margin-bottom:12px;padding:0 22px}
+.faq summary{font-family:var(--display);font-size:1.2rem;font-weight:600;color:var(--navy);padding:20px 0;cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--teal);font-family:var(--body);font-weight:700}
+.faq details[open ] summary::after{content:"–"}
+.faq details p{color:var(--ink-soft);padding:0 0 20px;margin:0}
+
+/* Book */
+.book-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+.book form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.book form label{display:block;font-weight:600;font-size:.95rem;color:var(--ink)}
+.book form label:nth-child(3),.book form label:nth-child(4){grid-column:1/-1}
+.book form input,.book form select{width:100%;margin-top:6px;padding:13px 14px;font:inherit;border:1.5px solid var(--mist-line);border-radius:var(--radius);background:#fff;color:var(--ink)}
+.book form input:focus,.book form select:focus{border-color:var(--teal);outline:none}
+.book form button{grid-column:1/-1}
+.form-note{grid-column:1/-1;font-size:.92rem;color:var(--ink-soft);margin:0}
+.call-summary{margin-top:24px;background:var(--mist);border-left:5px solid var(--teal);padding:22px 24px;border-radius:0 var(--radius) var(--radius) 0}
+.call-summary-title{font-family:var(--display);font-size:1.3rem;font-weight:700;color:var(--navy);margin:0 0 6px}
+.book-visual img{border-radius:var(--radius);width:100%;aspect-ratio:16/10;object-fit:cover}
+.book-card{background:var(--navy);color:#fff;padding:26px 28px;border-radius:var(--radius);margin-top:-46px;position:relative;width:calc(100% - 40px);margin-left:20px}
+.book-card p{color:#DCE8EC}
+.book-card p strong{color:#fff;font-family:var(--display);font-size:1.25rem}
+.book-card a{color:#fff;font-weight:700;font-size:1.25rem;text-decoration:none}
+
+/* Footer */
+.site-footer{background:var(--navy-deep);color:#DCE8EC;padding:56px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding-bottom:40px}
+.footer-wordmark{font-family:var(--display);font-size:1.6rem;font-weight:700;color:#fff;margin:0}
+.footer-sub{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#9FD8D2;margin:0 0 14px}
+.footer-heading{font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;margin:0 0 12px}
+.site-footer a{color:#fff}
+.footer-base{border-top:1px solid rgba(255,255,255,.16);padding:22px 24px 30px;font-size:.92rem;color:#9FB8C4}
+.footer-base p{margin:0 0 6px}
+.footer-credit{font-size:.85rem}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(6,22,36,.92);z-index:300;display:flex;align-items:center;justify-content:center;padding:24px}
+.lightbox[hidden]{display:none}
+.lightbox-img{max-width:min(1100px,88vw);max-height:84vh;border-radius:var(--radius);object-fit:contain}
+.lightbox-close,.lightbox-prev,.lightbox-next{position:absolute;background:var(--teal);color:#fff;border:0;border-radius:var(--radius);width:48px;height:48px;font-size:1.8rem;cursor:pointer;line-height:1}
+.lightbox-close{top:20px;right:20px}
+.lightbox-prev{left:16px;top:50%;transform:translateY(-50%)}
+.lightbox-next{right:16px;top:50%;transform:translateY(-50%)}
+
+/* (No scroll-reveal: content is visible immediately. A reveal that starts
+   at opacity:0 left the hero invisible in virtual-time captures.) */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .gallery-item img{transition:none}
+}
+
+/* Responsive */
+@media (max-width:1020px){
+  .hero-grid{grid-template-columns:1fr;gap:8px}
+  .hero-photo{min-height:0;max-width:520px;margin-left:0;aspect-ratio:4/3}
+  .appt-panel{position:static;max-width:520px;margin:-70px 24px 0;box-shadow:0 14px 30px rgba(4,20,32,.3)}
+  .hero{padding-bottom:56px}
+  .hero-copy{padding-bottom:0}
+  .tab-panel{grid-template-columns:1fr;gap:28px}
+  .surgery-grid,.why-grid,.about-grid,.book-grid{grid-template-columns:1fr;gap:36px}
+  .visit-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .steps li:nth-child(2){border-right:0;margin-right:0}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .site-nav,.header-call{display:none}
+  .menu-toggle{display:block}
+  .mobile-menu{display:flex}
+  .section{padding:60px 0}
+  .trust-grid{grid-template-columns:repeat(2,1fr);gap:18px}
+  .trust-grid div:nth-child(3){border-left:0}
+  .trust strong{font-size:1.35rem;white-space:nowrap}
+  .hours-card th{white-space:nowrap;font-size:.92rem}
+  .hours-card td{font-size:.92rem}
+  .steps{grid-template-columns:1fr}
+  .steps li{border-right:0;margin-right:0}
+  .why-cards{grid-template-columns:1fr}
+  .expect-photos{grid-template-columns:1fr}
+  .expect-photos img:last-child{max-height:none;aspect-ratio:16/10}
+  .book form{grid-template-columns:1fr}
+  .emergency-grid{grid-template-columns:1fr;gap:28px}
+  .surgery-photos{grid-template-columns:1fr}
+  .surgery-second{margin-top:0}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-ctas .btn{flex:1}
+  .appt-panel{margin:-40px 0 0}
+  .lightbox-prev{left:6px}
+  .lightbox-next{right:6px}
+}
